@@ -8,17 +8,6 @@ public class MyWindow : EditorWindow
 	[SerializeField]
 	private SerializeMe2 m_SerialziedThing;
 
-	[MenuItem("My/Thing2")]
-	static void X() {
-		MUE mue = ScriptableObject.CreateInstance<MUE>();
-		UnityEditor.AssetDatabase.CreateAsset(mue, "Assets/Resources/MUE.asset");
-		//UnityEditor.AssetDatabase.AddObjectToAsset(mue, "Assets/Resources/MUE.asset");
-		UnityEditor.AssetDatabase.SaveAssets();
-
-		EditorUtility.FocusProjectWindow ();
-		Selection.activeObject = mue;
-	}
-
 	[MenuItem ("Window/Serialization")]
 	static void Init () {
 		GetWindow <MyWindow>();
