@@ -54,6 +54,8 @@
      <Compile Include="Assets\Scripts\Molecunity\Reaction\ReactionPrep.cs" />
      <Compile Include="Assets\Scripts\Molecunity\Reaction\ReactionType.cs" />
      <Compile Include="Assets\Scripts\Molecunity\Reaction\Reagent.cs" />
+     <Compile Include="Assets\Scripts\Molecunity\Utility\ScriptableObjectUtility.cs" />
+     <Compile Include="Assets\Scripts\Molecunity\Utility\Utils.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

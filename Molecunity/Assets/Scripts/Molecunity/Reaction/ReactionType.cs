@@ -1,15 +1,35 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ReactionType : MonoBehaviour {
+[System.Serializable]
+public class ReactionType : ScriptableObject {
 
-	// Use this for initialization
-	void Start () {
-	
+	public string Name = "";
+
+	void OnEnable ()
+	{
+		hideFlags = HideFlags.HideInHierarchy;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+	public override string ToString ()
+	{
+		return Name;
+	}
+
+	public override int GetHashCode ()
+	{
+		return GetInstanceID ();
+	}
+
+	public override bool Equals (object o)
+	{
+		ReactionType other;
+		if (Utils.TypeEquals<ReactionType> (this, o, out other)) {
+
+			return 
+				(GetInstanceID() == other.GetInstanceID()) &&
+				(Name == other.Name);
+
+		} else { return false; }
 	}
 }

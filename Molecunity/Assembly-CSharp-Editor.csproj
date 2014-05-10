@@ -46,7 +46,13 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Editor\Molecunity\CustomGUI.cs" />
+     <Compile Include="Assets\Editor\Molecunity\CustomListViews.cs" />
+     <Compile Include="Assets\Editor\Molecunity\ListView.cs" />
+     <Compile Include="Assets\Editor\Molecunity\MoleculeEditor.cs" />
+     <Compile Include="Assets\Editor\Molecunity\MolecunityWindow.cs" />
      <Compile Include="Assets\Editor\Test.cs" />
+     <Compile Include="Assets\Editor\Test2.cs" />
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:\Program Files (x86)\Unity\Editor\Data\Managed\UnityEditor.Graphs.dll</HintPath>
  </Reference>
