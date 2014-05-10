@@ -69,15 +69,7 @@ public class MueEditor : Editor
 		}
 		
 		Space ();
-		
-		if (GUILayout.Button ("Load")) {
-			MUE loadedMue = AssetDatabase.LoadAssetAtPath("Assets/MUE.asset", typeof(MUE)) as MUE;
-			if (loadedMue == null)
-				Debug.LogError("MUE not found on disk");
-			else {
-				mue = loadedMue;
-			}
-		}
+
 		if (GUILayout.Button ("Reset")) {
 			mue.ResetData();
 		}

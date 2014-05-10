@@ -8,8 +8,6 @@ static class CustomGUI {
 	public static readonly GUIStyle splitter;
 	
 	static CustomGUI() {
-		GUISkin skin = GUI.skin;
-		
 		splitter = new GUIStyle();
 		splitter.normal.background = EditorGUIUtility.whiteTexture;
 		splitter.stretchWidth = true;
