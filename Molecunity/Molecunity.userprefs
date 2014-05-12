@@ -1,11 +1,14 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Editor\Molecunity\MolecunityWindow.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Editor\Molecunity\MoleculeEditor.cs">
     <Files>
       <File FileName="Assets\Scripts\Molecunity\Molecule.cs" Line="8" Column="33" />
-      <File FileName="Assets\Editor\Molecunity\MueEditor.cs" Line="1" Column="1" />
-      <File FileName="Assets\Editor\Molecunity\MoleculeEditor.cs" Line="27" Column="42" />
+      <File FileName="Assets\Editor\Molecunity\MueEditor.cs" Line="72" Column="3" />
+      <File FileName="Assets\Editor\Molecunity\MoleculeEditor.cs" Line="16" Column="23" />
       <File FileName="Assets\Editor\Molecunity\MolecunityWindow.cs" Line="20" Column="41" />
+      <File FileName="Assets\Editor\Molecunity\ListView.cs" Line="1" Column="1" />
+      <File FileName="Assets\Editor\Molecunity\CustomGUI.cs" Line="11" Column="1" />
+      <File FileName="Assets\Scripts\Molecunity\MoleculeSpecies.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

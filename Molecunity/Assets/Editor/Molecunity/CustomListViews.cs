@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEditor;
 using System.Collections;
 using System.Collections.Generic;
+using Molecunity;
+using Molecunity.Reaction;
 
 public class MoleculeSpeciesListView : ListView<MoleculeSpecies>
 {

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEditor;
+using Molecunity;
 
 [CustomEditor(typeof(Molecule))]
 public class MoleculeEditor : Editor 

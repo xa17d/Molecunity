@@ -2,8 +2,11 @@
 using UnityEditor;
 using System.IO;
 
-[System.Serializable]
-public class Molecule : MonoBehaviour {
+namespace Molecunity
+{
+	[System.Serializable]
+	public class Molecule : MonoBehaviour {
 
-	public MoleculeSpecies Species;
+		public MoleculeSpecies Species;
+	}
 }

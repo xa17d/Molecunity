@@ -2,6 +2,7 @@
 using UnityEditor;
 using System.Collections;
 using System.Collections.Generic;
+using Molecunity;
 
 [System.Serializable]
 public class MolecunityWindow : EditorWindow
