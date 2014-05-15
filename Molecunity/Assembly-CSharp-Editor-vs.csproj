@@ -52,6 +52,7 @@
      <Compile Include="Assets\Editor\Molecunity\MoleculeEditor.cs" />
      <Compile Include="Assets\Editor\Molecunity\MolecunityWindow.cs" />
      <Compile Include="Assets\Editor\Molecunity\MueEditor.cs" />
+     <Compile Include="Assets\Editor\Molecunity\PdbImportWindow.cs" />
      <Compile Include="Assets\Editor\Test.cs" />
      <Compile Include="Assets\Editor\Test2.cs" />
  <Reference Include="UnityEditor.Graphs">

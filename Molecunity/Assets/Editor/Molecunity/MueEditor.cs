@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using UnityEditor;
 using Molecunity;
+using Molecunity.Model.Pdb;
 
 [CustomEditor(typeof(MUE))]
 public class MueEditor : Editor 
@@ -44,8 +45,15 @@ public class MueEditor : Editor
 		GUILayout.EndHorizontal ();
 		
 		GUILayout.BeginHorizontal ();
-		GUILayout.Button ("From PDB File");
-		GUILayout.Button ("Download From PDB");
+
+		if (GUILayout.Button ("From PDB File")) {
+			PdbImport pdbImport = new PdbImport();
+			pdbImport.UserSelectFile();
+		}
+
+		if (GUILayout.Button ("Download From PDB")) {
+			PdbImportWindow.UserDownload();
+		}
 		GUILayout.EndHorizontal ();
 		
 		Space ();
