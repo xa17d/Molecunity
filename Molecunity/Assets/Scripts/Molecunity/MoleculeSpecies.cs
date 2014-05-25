@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
+using UnityEditor;
 using System.Collections;
+using System.Collections.Generic;
 using Molecunity.Utility;
 
 namespace Molecunity
@@ -17,11 +19,20 @@ namespace Molecunity
 		[SerializeField]
 		public string Name = "Molecule";
 
+		[SerializeField]
+		public Object Prefab;
+
+		public void Delete() {
+
+			if (Prefab != null) {
+
+			}
+		}
+
 		public override string ToString ()
 		{
 			return Name;
 		}
-
 		
 		public override int GetHashCode ()
 		{

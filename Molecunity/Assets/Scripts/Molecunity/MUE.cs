@@ -53,8 +53,8 @@ namespace Molecunity
 		}
 
 		public void RemoveSpecies(MoleculeSpecies s) {
+			s.Delete ();
 			species.Remove (s);
-
 			ScriptableObject.DestroyImmediate (s, true);
 		}
 

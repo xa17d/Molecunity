@@ -47,32 +47,44 @@ namespace Molecunity.Model.Pdb
 			
 			GameObject mol = new GameObject(molName);
 			Debug.Log ("About to add atoms...");
-			
+
 			int i = 0;
 			foreach (Atom atom in m.Atoms) {
-				Debug.Log("Atom "+(i++)+"/"+m.Atoms.Length);
+				i++;
+				EditorUtility.DisplayProgressBar ("Creating Molecule...", "Atom "+i+"/"+m.Atoms.Length, i*1f/m.Atoms.Length);
+
 				AddAtom(
 					atom,
 					mol.transform
 					);
 			}
 
+			EditorUtility.DisplayProgressBar ("Creating Molecule...", "Creating Species...", 0.3f);
+
 			MUE mue = MUE.GetInstance ();
 			MoleculeSpecies species = mue.CreateMoleculeSpecies ();
 			species.Name = molName;
 			mue.AddSpecies (species);
 
+			EditorUtility.DisplayProgressBar ("Creating Molecule...", "Creating Species...", 0.5f);
+
 			mol.AddComponent<Molecunity.Molecule>();
 			Molecunity.Molecule script = mol.GetComponent<Molecunity.Molecule> ();
 			script.Species = species;
 			
-			Debug.Log ("About to create Prefab...");
+			EditorUtility.DisplayProgressBar ("Creating Molecule...", "Creating Prefab...", 0.1f);
 			
 			Object prefab = PrefabUtility .CreateEmptyPrefab("Assets/Molecules/"+molName+".prefab");
+			EditorUtility.DisplayProgressBar ("Creating Molecule...", "Creating Prefab...", 0.2f);
 			PrefabUtility.ReplacePrefab(mol, prefab);
+			EditorUtility.DisplayProgressBar ("Creating Molecule...", "Refresh...", 0.9f);
 			AssetDatabase.Refresh();
-			
+
+			species.Prefab = prefab;
+
+			EditorUtility.DisplayProgressBar ("Creating Molecule...", "Done", 1f);
 			Debug.Log ("done");
+			EditorUtility.ClearProgressBar ();
 		}
 		
 		static void AddAtom(Atom atom, Transform transform)

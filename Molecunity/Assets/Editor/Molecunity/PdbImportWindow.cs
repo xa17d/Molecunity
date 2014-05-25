@@ -32,13 +32,7 @@ public class PdbImportWindow : EditorWindow {
 
 			//if (pdbImport.DownloadFile("http://test.xa1.at/data/test.pdb")) {
 			if (pdbImport.DownloadFile("http://www.rcsb.org/pdb/download/downloadFile.do?fileFormat=pdb&compression=NO&structureId="+WWW.EscapeURL(pdbName), pdbName)) {
-				if (!EditorUtility.DisplayDialog("Done", "Molecule Successfully Downloaded", "download another", "close"))
-				{ Close(); }
-				else
-				{ 
-					pdbName = "";
-					Repaint();
-				}
+
 			}
 		}
 	}
